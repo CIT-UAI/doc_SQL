@@ -1,0 +1,60 @@
+## Introducción SQL
+
+Se ha implimentado un servidor PostGIS, de esa manera los datos e insumos pueden ser cargados directamente
+desde el servidor, sin necesidad de ningun archivo.
+
+Hay varios objetios al aplicar esta metodologia, los mas importantes:
+
+1. Todos accederan a la ultima version del insumo
+2. Se diferencian las fases de trabajar un insumo, a usarlo
+3. El procesamiento se ira derivandose al servidor, cada vez se necesitara un PC menos potente para trabajar
+
+### Intro Bases de datos
+
+Ahora podemos leer datos, sin embargo revisemos unos conceptos sobre bases de datos.
+
+Las bases de datos utilizan tablas, en resumen tienen la capacidad de almacenar, tratar y solcitiar datos como su fuera un excel gigante.
+
+Sin embargo usar muchos datos tambien implica nuevos desafios y soluciones, en resumen las bases de datos tiene el siguiente esquema.
+
+* Servidor
+    + Base de datos 1
+    + Base de datos 2
+        + Esquema 1
+        + Esquema 2
+            + Tabla 1
+            + Tabla 2
+
+El servidor, es una aplicacion que contiene y ejecuta todo lo que le decimos, es nuestro PC o sistema operativo.
+
+La base de datos, es una carpeta de excels.
+
+Un esquema es un archivo excel, por defecto, siempre existira el "public", si no decimos que archivo abrir, siempre abrira este.
+
+Una tabla, es una pestaña de un excel.
+
+¿Por que tantas separaciones?
+
+Hay varias razones, por las cuales se usan varios servidores, bases de datos, esquemos y tablas.
+
+Si necesitamos los hospitales de chile, solo necesitamos su shp, y listo, no necesitamos mas, sin embargo con el tiempo podemos necesitar:
+
+* Hospitales
+* Escuelas
+* Locales de comida
+
+Con el tiempo necesitariamos mas que solo datos espaciales, podriamos necesitar
+
+* Escuelas
+    + Cantidad de personas expuladas
+    + Cantidad de personas ingresadas
+        + Categorizadas por ingreso
+* Hospitales
+    + Ingreso y salida por persona
+    + Tasa de fallecidos
+
+Mientras mas pasa el tiempo, seguramente se va adquiriendo mas informacion, y diversa. Esto termina causando que disponer de todas las tablas en un solo lugar no es una buena idea, es como tener un excel con miles de pestañas, cada vez es mas dificil de organizar y usar, incluso abrir un excel tan grande seria dificil y puede que ningun PC pueda hacerlo, o uno extremadamente potente, a las bases de datos les pasa lo mismo.
+
+Al dividir en categorias podemos no solo organizar, si no que mejorar uno de nuestros grandes limites, el hardware.
+
+Si hacemos calculos complicados con muchas tablas, el servidor estara tan ocupado que nadie mas podra acceder a los datos, pero si dividimos en grupos, ordenamos y gestionamos el procesamiento y los datos, entonces el trabajo se vuelve mas eficiente.
