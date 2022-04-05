@@ -11,50 +11,35 @@ Hay varios objetios al aplicar esta metodologia, los mas importantes:
 
 ### Intro Bases de datos
 
-Ahora podemos leer datos, sin embargo revisemos unos conceptos sobre bases de datos.
+Para introducir el mundo de las bases de datos, entendamos el contexto donde se manejan.
 
-Las bases de datos utilizan tablas, en resumen tienen la capacidad de almacenar, tratar y solcitiar datos como su fuera un excel gigante.
+Imaginemos que tenemos un excel, sin embargo este excel es especial, es un excel que tiene información muy important, y muchas personas del trabajo usan su información, por ejemplo, datos de hospitales, la cantidad de personas que van de forma mensual, el costo promedio, su dirección y mucha mas.
 
-Sin embargo usar muchos datos tambien implica nuevos desafios y soluciones, en resumen las bases de datos tiene el siguiente esquema.
+Como todos usan esta información, todos deben tener su copia del archivo, o bajar alguna que este online para luego poder usarla, un gran desafio con esta metodologia es la actualización de la información, si cada persona que trabaja tiene acceso a otra información de algun otro hospital, o quiere añadir una nueva columna por ejemplo, con la cantidad de personas estimada que hay al rededor de 1km de distanicia, ¿como vamos a añadir esa informacion?
 
-* Servidor
-    + Base de datos 1
-    + Base de datos 2
-        + Esquema 1
-        + Esquema 2
-            + Tabla 1
-            + Tabla 2
+Si cada persona tiene información diferente, cada una realizaria cambios, y seguidamente alguien, tendria que tomar todos esos excels y hacerlos uno, es un trabajo lento y dificil, hay varios desafios con esta metodlogia:
 
-El servidor, es una aplicacion que contiene y ejecuta todo lo que le decimos, es nuestro PC o sistema operativo.
+* Nada asegura que tengamos toda la información de un hospital, si no tenemos algun dato como la cantidad de pacientes, y luego lo sabemos, hay que darse el trabajo de unir.
+* Supongamos que se lleva tiempo con este mecanismo, y se realizo lo siguiente, cuando se quiere hacer una version nueva, se piden los excels a todos, y se pone a un equipo a unir todos los datos, ya se hiso la version 1 y 2, ahora va la 3, sin embargo, de todos los excels, notas que algunos son de la version 1...., a algunos se les olvido bajar la version nueva, sin embargo, estos excels igual pueden tener informacion nueva, asi que de todas maneras hay que construir el nuevo excel manejando varias versiones diferentes del mismo documento, con tal vez incluso, diferentes formatos o estructura de datos.
 
-La base de datos, es una carpeta de excels.
+Tener documentos compartidos y escenciales no es un trabajo facil ni trivial, tener un buen manejo de informacion es vital para muchos proyectos.
 
-Un esquema es un archivo excel, por defecto, siempre existira el "public", si no decimos que archivo abrir, siempre abrira este.
+Con el tiempo, puede ser necesario incluir nuevos datos para nuevos proyectos, ahora ya no vamos a necesitar solo hospitales, vamos a necesitar establecimientos educaciones, locales de bienes indispensables y varios mas.
 
-Una tabla, es una pestaña de un excel.
+Y si va todo bien, vamos a pasar de analizar y necesitar no solamente datos de una localidad o region, podriamos ya empezar a necesitar datos nacionales o mundiales, ahora tenemos en nuestro excel tantas pestañas con temas y datos, que el PC ya no los logra abrir, tal vez uno suportente, aun así estamos en problemas, aun podemos dividir este excel en carpetas, cada carpeta con un tema, luego un excel con un tema, y cada pestaña con un subtema, es un arreglo que funcionaria, al menos para abrir los documentos si son lo suficientemente chicos, y esta division de datos.
 
-¿Por que tantas separaciones?
+Ahora, tenemos mucha información, muchas carpetas, muchos excels, un gran equipo que se encarga de sacar nuevas versiones, el cual de vez en cuando hay que contratar mas personas por el aumento en la cantidad de informacion, aun así, deberia haber una manera mas practica, una forma mas facil de gestionar todo este tema de la información.
 
-Hay varias razones, por las cuales se usan varios servidores, bases de datos, esquemos y tablas.
+Incluso si podemos almacenarla y ordenarla, dificilemnte podremos analizar bien la cantidad de datos que usamos, o realizar analsis de datos cruzados, por ejemplo comparar relaciones entre la cantidad de poblacion de un sector, sus recursos economicos y la cantidad de personas que ingresan al hospital, incluso si el excel tiene esa funcion, dificilmente funcione bien con muchos datos, no es que falte aprender mas excel, simplemente no esta diseñado para esa cantidad de datos, y para el uso que le estamos dando.
 
-Si necesitamos los hospitales de chile, solo necesitamos su shp, y listo, no necesitamos mas, sin embargo con el tiempo podemos necesitar:
+En este contexto entran los sistemas para bases de datos, este programa es un super excel, el cual esta diseñado para manejar miles de millones de datos y en parte poder trabajarlos, este sistema tiene la siguiente estructura:
 
-* Hospitales
-* Escuelas
-* Locales de comida
+* Servidor (Super excel, que contendra muchos excels normales)
+    + Base de datos 1 (Carpeta 1)
+    + Base de datos 2 (Carpeta 2)
+        + Esquema 1 (Excel 1 de la Carpeta 2)
+        + Esquema 2 (Excel 2 de la Carpeta 2)
+            + Tabla 1 (Pestaña 1 del Excel 2)
+            + Tabla 2 (Pestaña 2 del Excel 2)
 
-Con el tiempo necesitariamos mas que solo datos espaciales, podriamos necesitar
-
-* Escuelas
-    + Cantidad de personas expuladas
-    + Cantidad de personas ingresadas
-        + Categorizadas por ingreso
-* Hospitales
-    + Ingreso y salida por persona
-    + Tasa de fallecidos
-
-Mientras mas pasa el tiempo, seguramente se va adquiriendo mas informacion, y diversa. Esto termina causando que disponer de todas las tablas en un solo lugar no es una buena idea, es como tener un excel con miles de pestañas, cada vez es mas dificil de organizar y usar, incluso abrir un excel tan grande seria dificil y puede que ningun PC pueda hacerlo, o uno extremadamente potente, a las bases de datos les pasa lo mismo.
-
-Al dividir en categorias podemos no solo organizar, si no que mejorar uno de nuestros grandes limites, el hardware.
-
-Si hacemos calculos complicados con muchas tablas, el servidor estara tan ocupado que nadie mas podra acceder a los datos, pero si dividimos en grupos, ordenamos y gestionamos el procesamiento y los datos, entonces el trabajo se vuelve mas eficiente.
+Podemos ver que un servidor de bases de datos o sistema de bases de datos ya nos permite darle un orden a toda la información
