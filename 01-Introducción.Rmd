@@ -1,14 +1,5 @@
 ## Introducción SQL
 
-Se ha implementado un servidor PostGIS, de esa manera los datos e insumos pueden ser cargados directamente
-desde el servidor, sin necesidad de ningun archivo.
-
-Hay varios objetivos al aplicar esta metodología, los mas importantes:
-
-1. Todos accederan a la última versión del insumo
-2. Se diferencian las fases de trabajar un insumo, a usarlo
-3. El procesamiento se irá derivando al servidor, cada vez se necesitará un PC menos potente para trabajar
-
 ### Intro Bases de datos
 
 Para introducir el mundo de las bases de datos, entendamos el contexto donde se manejan.
