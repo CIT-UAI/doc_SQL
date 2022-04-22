@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>0.2 Introducción Parte 2 | Documentación sobre SQL</title>
+  <meta name="description" content="Piloto de documentación con Bookdown" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="0.2 Introducción Parte 2 | Documentación sobre SQL" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Piloto de documentación con Bookdown" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="0.2 Introducción Parte 2 | Documentación sobre SQL" />
+  
+  <meta name="twitter:description" content="Piloto de documentación con Bookdown" />
+  
+
+<meta name="author" content="Equipo de Investigación (?)" />
+
+
+<meta name="date" content="2022-04-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="0.1-introducción-sql.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Documentación CIT</a></li>
+
+<li class="divider"></li>
+<li><a href="prefacio.html#prefacio">Prefacio<span></span></a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="0.1-introducción-sql.html"><a href="0.1-introducción-sql.html"><i class="fa fa-check"></i><b>0.1</b> Introducción SQL<span></span></a>
+<ul>
+<li class="chapter" data-level="0.1.1" data-path="0.1-introducción-sql.html"><a href="0.1-introducción-sql.html#intro-bases-de-datos"><i class="fa fa-check"></i><b>0.1.1</b> Intro Bases de datos<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="0.2" data-path="0.2-introducción-parte-2.html"><a href="0.2-introducción-parte-2.html"><i class="fa fa-check"></i><b>0.2</b> Introducción Parte 2<span></span></a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Documentación sobre SQL</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introducción-parte-2" class="section level2 hasAnchor" number="0.2">
+<h2><span class="header-section-number">0.2</span> Introducción Parte 2<a href="0.2-introducción-parte-2.html#introducción-parte-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ha sido bastante texto para la parte 1, asi que vamos a dividir, ya que a pesar que aún estamos introduciendo, la temática y narrativa cambiara un poco desde acá.</p>
+<p>Retomemos desde la base de datos, la cual tiene una estructura en el Servidor, Base de datos, Esquema y Tabla, vamos a indicar ahora en términos generales que soluciona un servidor.</p>
+<p>Los servidores permiten lo siguiente:</p>
+<ul>
+<li>Una gran cantidad de personas pueden leer acceder a una tabla de forma simultánea y pueden
+<ul>
+<li>Leer los datos</li>
+<li>Editar los datos</li>
+<li>Trabajar con los datos</li>
+</ul></li>
+<li>Crear funciones en la base de datos, estas ya traen funciones para obtener por ejemplo la suma de los valores de una columna, igual que el excel, si no nos bastan las funciones que trae, siempre podemos hacer más y que estén disponibles.</li>
+<li>Se pueden crear usuarios y permisos, para ajustar quienes pueden hacer que en cada base de datos, esquema o tabla.</li>
+</ul>
+<p>Como pueden notar, los sistemas de bases de datos son muy útiles y potentes, si pusiéramos el ejemplo anterior.</p>
+<p>Tenemos una Tabla con los datos de un hospital, y un integrante del equipo ahora tiene cuantas personas entran y salen del mismo, puede ingresar los datos a la tabla, y desde ese momento esa actualizacion estara disponible para todas las personas de forma casi instantánea, no se necesita revisar, unir ni nada parecido.</p>
+<p>Hay varios puntos como respaldos, que pasa si alguien se equivoca y borra/cambia un dato o tabla, sin embargo, eso lo dejaremos para más adelante, ya que hay alternativas, no se preocupen.</p>
+<p>Es hora de ver uno de los puntos más controversiales para quienes ven una base de datos, mientras que el Excel está pensado para cosas pequeñas (para hoy en día, la capacidad del excel es pequeño), es importante ver y tratar datos de forma visual, ya que es rápido y amigable con el usuario.</p>
+<p>Los sistemas de base de datos no tienen interfaz gráfica, divide y conquistaras, con tal de poder llegar a un modelo eficiente para tratar tantos datos, el excel se dividió.</p>
+<p>El servidor se encargará de gestionar datos por detrás (ingresarlos, transformarlos y entregarlos).</p>
+<p>Alguna otra aplicación se usará para poder verlos o darles un tratamiento diferente, de hecho, podemos abrir una base de datos con excel.</p>
+<p>Este punto, en parte puede deberse a que, tiene sentido ver datos en un excel cuando no son muchos, de esa manera visualmente controlas, regulas que hay y que no hay, sin embargo, si tienes miles y millones de datos, no tiene mucho sentido verlos, lo mas seguro es que ingreses datos, quieras ver una parte, y editar alguna parte.</p>
+<p>Ahora, no tenemos interfaz gráfica, ¿cómo nos relacionamos con el sistema de bases de datos?</p>
+<p>Los sistemas de bases de datos tienen datos, y lo que nos importa es cómo obtenerlos y tratarlos, poder hacer “Consultas”, y se creó una sintaxis, un lenguaje para poder realizar estas consultas, ese lenguaje se llama SQL.</p>
+<p>El lenguaje usualmente es bastante intuitivo, pero de a ratos es tan larga la consulta que escribimos que puede ser complicado de usar, porque es difícil de visualizar y conectar todo lo escrito.</p>
+<p>Sin embargo no nos estaremos, el lenguaje está, pero no necesitas saber casi nada, y aveces nada para poder leer datos, por ejemplo, si pones los datos de una tabla, con su base de datos, usuario y clave a un excel, podrás leerla, ¿como lee el excel estos datos? Por detrás se comunica con el lenguaje SQL para recuperar los datos que quieres ver, y luego te los muestra, los edita y al guardar, el Excel vuelve a usar el lenguaje SQL para decirle al sistema de base de datos que realice los cambios en la tabla.</p>
+<p>De la misma forma para quienes programan, muchos lenguajes tienen librerías y módulos, que hacen automáticamente esto, de esa manera no necesitas saber SQL.</p>
+<p>Aun así, por más que eso esté automático, no siempre es suficiente, si necesitas trabajar con muchos datos, necesitas relaciones más complejas, te importa que el trabajo se hecho bien y rápido, vas a necesitar aprender SQL, es un lenguaje que incluso en su conocimiento más básico, da una gran ventaja sobre muchas aplicaciones automáticas, recuperar las información justa y necesaria para trabajar, es clave en un mundo donde la información abunda.</p>
+<p>Una mirada superficial a lo que permite SQL:</p>
+<p>Los datos y tablas pueden ser:</p>
+<ul>
+<li>Relacionados (por ejemplo unir tablas por una o varias columnas)</li>
+<li>Filtrar datos</li>
+<li>Hacer cálculos</li>
+<li>Construir tablas nuevas en base a otras</li>
+<li>Funciones personalizadas</li>
+</ul>
+<p>¿Entonces tendré que aprender SQL para poder hacer todo bien? Depende, es bueno tener idea sobre como las bases de datos, sin embargo, siempre puedes dividir el trabajo, si hay algo que necesitas, puedes hablar con alguien más técnico que lo haga y desarrolle, luego usas esa eficiente caja negra que te pasaron, la ventaja del CIT ahí es que es multidisciplinario.</p>
+
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="0.1-introducción-sql.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-Introducción.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

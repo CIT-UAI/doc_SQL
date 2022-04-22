@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>0.1 Introducción SQL | Documentación sobre SQL</title>
+  <meta name="description" content="Piloto de documentación con Bookdown" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="0.1 Introducción SQL | Documentación sobre SQL" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Piloto de documentación con Bookdown" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="0.1 Introducción SQL | Documentación sobre SQL" />
+  
+  <meta name="twitter:description" content="Piloto de documentación con Bookdown" />
+  
+
+<meta name="author" content="Equipo de Investigación (?)" />
+
+
+<meta name="date" content="2022-04-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="prefacio.html"/>
+<link rel="next" href="0.2-introducción-parte-2.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Documentación CIT</a></li>
+
+<li class="divider"></li>
+<li><a href="prefacio.html#prefacio">Prefacio<span></span></a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="0.1-introducción-sql.html"><a href="0.1-introducción-sql.html"><i class="fa fa-check"></i><b>0.1</b> Introducción SQL<span></span></a>
+<ul>
+<li class="chapter" data-level="0.1.1" data-path="0.1-introducción-sql.html"><a href="0.1-introducción-sql.html#intro-bases-de-datos"><i class="fa fa-check"></i><b>0.1.1</b> Intro Bases de datos<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="0.2" data-path="0.2-introducción-parte-2.html"><a href="0.2-introducción-parte-2.html"><i class="fa fa-check"></i><b>0.2</b> Introducción Parte 2<span></span></a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Documentación sobre SQL</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introducción-sql" class="section level2 hasAnchor" number="0.1">
+<h2><span class="header-section-number">0.1</span> Introducción SQL<a href="0.1-introducción-sql.html#introducción-sql" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="intro-bases-de-datos" class="section level3 hasAnchor" number="0.1.1">
+<h3><span class="header-section-number">0.1.1</span> Intro Bases de datos<a href="0.1-introducción-sql.html#intro-bases-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para introducir el mundo de las bases de datos, entendamos el contexto donde se manejan.</p>
+<p>Imaginemos que tenemos un excel, sin embargo este excel es especial, es un excel que tiene información muy importante, y muchas personas del trabajo usan su información, por ejemplo, datos de hospitales, la cantidad de personas que van de forma mensual, el costo promedio, su dirección y mucha más.</p>
+<p>Como todos usan esta información, todos deben tener su copia del archivo, o bajar alguna que esté online para luego poder usarla, un gran desafío con esta metodología es la actualización de la información, si cada persona que trabaja tiene acceso a otra información de algún otro hospital, o quiere añadir una nueva columna por ejemplo, con la cantidad de personas estimada que hay alrededor de 1km de distancia, ¿como vamos a añadir esa información?</p>
+<p>Si cada persona tiene información diferente, cada una realizaría cambios, y seguidamente alguien, tendría que tomar todos esos excels y hacerlos uno, es un trabajo lento y difícil, hay varios desafíos con esta metodología:</p>
+<ul>
+<li>Nada asegura que tengamos toda la información de un hospital, si no tenemos algún dato como la cantidad de pacientes, y luego lo sabemos, hay que darse el trabajo de unir.</li>
+<li>Supongamos que se lleva tiempo con este mecanismo, y se realizó lo siguiente, cuando se quiere hacer una versión nueva, se piden los excels a todos, y se pone a un equipo a unir todos los datos, ya se hizo la versión 1 y 2, ahora va la 3, sin embargo, de todos los excels, notas que algunos son de la versión 1…., a algunos se les olvidó bajar la version nueva, sin embargo, estos excels igual pueden tener información nueva, así que de todas maneras hay que construir el nuevo excel manejando varias versiones diferentes del mismo documento, con tal vez incluso, diferentes formatos o estructura de datos.</li>
+</ul>
+<p>Tener documentos compartidos y esenciales no es un trabajo fácil ni trivial, tener un buen manejo de información es vital para muchos proyectos.</p>
+<p>Con el tiempo, puede ser necesario incluir nuevos datos para nuevos proyectos, ahora ya no vamos a necesitar solo hospitales, vamos a necesitar establecimientos educacionales, locales de bienes indispensables y varios más.</p>
+<p>Y si va todo bien, vamos a pasar de analizar y necesitar no solamente datos de una localidad o región, podriamos ya empezar a necesitar datos nacionales o mundiales, ahora tenemos en nuestro excel tantas pestañas con temas y datos, que el PC ya no los logra abrir, tal vez uno muy potente, aun así estamos en problemas, aun podemos dividir este excel en carpetas, cada carpeta con un tema, luego un excel con un tema, y cada pestaña con un subtema, es un arreglo que funcionara, al menos para abrir los documentos si son lo suficientemente chicos, y esta división de datos.</p>
+<p>Ahora, tenemos mucha información, muchas carpetas, muchos excels, un gran equipo que se encarga de sacar nuevas versiones, el cual de vez en cuando hay que contratar más personas por el aumento en la cantidad de información, aun así, debería haber una manera más práctica, una forma más fácil de gestionar todo este tema de la información.</p>
+<p>Incluso si podemos almacenarla y ordenarla, difícilmente podremos analizar bien la cantidad de datos que usamos, o realizar análisis de datos cruzados, por ejemplo comparar relaciones entre la cantidad de población de un sector, sus recursos económicos y la cantidad de personas que ingresan al hospital, incluso si el excel tiene esa función, difícilmente funcione bien con muchos datos, no es que falte aprender más excel, simplemente no está diseñado para esa cantidad de datos, y para el uso que le estamos dando.</p>
+<p>En este contexto entran los sistemas para bases de datos, este programa es un super excel, el cual está diseñado para manejar miles de millones de datos y en parte poder trabajarlos, este sistema tiene la siguiente estructura:</p>
+<ul>
+<li>Servidor (Super excel, que contendrá muchos excels normales)
+<ul>
+<li>Base de datos 1 (Carpeta 1)</li>
+<li>Base de datos 2 (Carpeta 2)
+<ul>
+<li>Esquema 1 (Excel 1 de la Carpeta 2)</li>
+<li>Esquema 2 (Excel 2 de la Carpeta 2)
+<ul>
+<li>Tabla 1 (Pestaña 1 del Excel 2)</li>
+<li>Tabla 2 (Pestaña 2 del Excel 2)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Podemos ver que un servidor de bases de datos o sistema de bases de datos ya nos permite darle un orden a toda la información, tal vez no sea una alternativa perfecta como cuando podemos tener muchas carpetas dentro de carpetas, pero igual podemos jugar con los nombres de las tablas, si se usan nomenclaturas como “hospitales_”, y "_2020“, o”_entrada" para ordenar las tablas, por ejemplo para, si tenemos datos sobre a qué hora entra una persona al hospital, y a que hora sale, tendríamos dos tablas:</p>
+<p>“datos_personas” Columnas de Rut, Nombre, Apellido
+“hospital_entrada_salida_2020”. Rut, Fecha/Hora entrada, Fecha/hora salida</p>
+<p>Si viéramos solamente la tabla de los datos del hospital podría uno toparse con lo siguiente, “Espera, a veces quiero poder tener el nombre y apellido, poder ver solamente el rut no me sirve”</p>
+<p>Perfectamente razonable, ahora recordemos, las bases de datos se especializan en tratar grandes cantidades de datos, y tienen muchos temas cubiertos, y este es uno de ellos, si escribiéramos el nombre y apellido en cada tabla tendríamos información repetida, y no es eficiente actualizar cada tabla por separado, por eso, las bases de datos te permiten decirle, “une ambas tablas, y usa el rut para unirlas”, de esa manera tendríamos una sola tabla con Rut, Nombre, Apellido, Fecha/Hora entrada y Fecha/Hora salida.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="prefacio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="0.2-introducción-parte-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-Introducción.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
